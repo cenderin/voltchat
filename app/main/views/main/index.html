@@ -15,11 +15,11 @@
           </form>
           <br/>
             <div>
-              {{store._messages.each do |message|}}
+              {{store._messages.reverse.each do |message|}}
                 <p>
                   <strong>{{ message.user.then(&:_name) }}</strong>
                   <span>{{ message._body}}</span>
-                  <span>{{ message._time_created}}</span>
+                  <span>{{ message._time_created.strftime('%b %e, %l:%M %p') }}</span>
 
                 </p>
               {{ end }}

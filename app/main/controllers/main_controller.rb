@@ -14,7 +14,6 @@ module Main
 
     def send_message
       store._messages << page._form && create_time
-
       reset_message
     end
 
